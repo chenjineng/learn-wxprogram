@@ -1,0 +1,5 @@
+/* pages/template/index.wxss */
+.bar {
+  width: 100vw;
+  background: red;
+}

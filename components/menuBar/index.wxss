@@ -1,0 +1,52 @@
+/* components/menuBar/index.wxss */
+.box {
+  width: 100vw;
+  /* 背景色是可配置项目 */
+  /* background: blue; */
+  overflow: hidden;
+}
+
+.bar {
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  /* background: lightblue; */
+}
+
+.bar .title {
+  display: inline-block;
+  width: 100%;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.btn-group.all {
+  justify-content: space-around;
+}
+
+.btn-group.home {
+  justify-content: space-between;
+}
+
+.btn-group .line {
+  top: 0;
+  /* 缩放 0.5 */
+  width: 1rpx;
+  transform: scaleX(0.5);
+  background: lightgray;
+}
+
+.btn-group .icon {
+  width: 30%;
+  height: 80%;
+  z-index: 200;
+  object-fit: cover;
+}

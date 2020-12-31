@@ -1,0 +1,18 @@
+<!--components/menuBar/index.wxml-->
+<!-- 返回键 搜索框（滚动播放） 返回主页 -->
+<view class="box" style="height: {{boxHeight}};padding-top: {{bar.top}};background: {{color}}">
+  <view
+    class="bar"
+    style="height: {{bar.height}};line-height: {{bar.height}};">
+    <!-- 自定义顶部导航栏  -->
+    <text class="title text-center">{{title}}</text>
+    
+    <view
+      class="btn-group all"
+      style="width: {{bar.widthB}};height: {{bar.height}};line-height: {{bar.height}};left: {{bar.left}};">
+      <image class="icon" bindtap="home" src="../../images/menuBar/icon-back.png"></image>
+      <view class="line" style="height: {{bar.lineHeight}};"></view>
+      <image class="icon" bindtap="home" src="../../images/menuBar/icon-home.png"></image>
+    </view>
+  </view>
+</view>

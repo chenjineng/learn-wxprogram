@@ -1,0 +1,6 @@
+<!--pages/communication/index.wxml-->
+<view>
+  <text>1.基础库 2.7.3 开始支持</text>
+  <text>2.on 监听事件，emit 派发事件</text>
+  <text>3.设置上一页的值，还可以使用 getCurrentPages()[length - 2]</text>
+</view>

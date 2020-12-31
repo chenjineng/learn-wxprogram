@@ -1,0 +1,6 @@
+<!--pages/home/index.wxml-->
+<view class="point-list">
+  <block wx:for="{{point_list}}" wx:key="index">
+    <view class="point" bindtap="navTo" data-path="{{item.path}}">{{item.point_name}}</view>
+  </block>
+</view>

@@ -1,0 +1,16 @@
+/* pages/home/index.wxss */
+.point-list {
+  width: 100vw;
+  padding: 0 20rpx 0 20rpx;
+  margin-top: 20rpx;
+}
+
+.point {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  width: 100%;
+  background: #f1f1f1;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+} 
+

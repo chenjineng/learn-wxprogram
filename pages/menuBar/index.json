@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "menu-bar-search": "../../components/menuBarSearch",
+    "menu-bar": "../../components/menuBar"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

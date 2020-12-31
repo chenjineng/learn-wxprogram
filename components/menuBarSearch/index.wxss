@@ -1,0 +1,50 @@
+/* components/menuBarSearch/index.wxss */
+@keyframes roll {
+  0% { top: 0px; }
+  100% { top: -400%; }
+}
+
+.box {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.bar {
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.btn-group {
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 30rpx;
+  background: lightgray;
+  overflow: hidden;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  object-fit: cover;
+}
+
+.nowrap {
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.hot-list {
+  margin-left: 40rpx;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  font-size: 30rpx;
+  color: gray;
+  /* animation: 6s roll linear infinite; */
+}
