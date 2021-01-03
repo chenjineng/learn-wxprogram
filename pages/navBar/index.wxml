@@ -1,0 +1,4 @@
+<!--pages/template/index.wxml-->
+<custom-bar title="自定义组件" color="lightblue"></custom-bar>
+<!-- 传递热搜数组 -->
+<search-bar hot-list="{{hotList}}"></search-bar>

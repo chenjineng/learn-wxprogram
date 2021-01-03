@@ -1,4 +1,4 @@
-// components/menuBar/index.js
+// components/top-nav-bar/frame/index.js
 const app = getApp()
 
 Component({
@@ -30,16 +30,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    home() {
-      wx.switchTab({
-        url: '../../pages/home/index',
-      })
-    },
-    back() {
-      wx.navigateBack({
-        delta: -1,
-      })
-    },
     // 计算顶部导航的属性
     renderMenu() {
       let { boxHeight, bar } = app.calcMenu();
@@ -55,3 +45,4 @@ Component({
     this.renderMenu()
   }
 })
+

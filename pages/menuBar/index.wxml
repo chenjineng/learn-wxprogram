@@ -1,5 +1,0 @@
-<!--pages/template/index.wxml-->
-<menu-bar title="自定义组件" color="lightblue"></menu-bar>
-
-<!-- 传递热搜数组 -->
-<menu-bar-search hot-list="{{hotList}}"></menu-bar-search>

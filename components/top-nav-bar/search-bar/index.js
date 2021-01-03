@@ -1,4 +1,4 @@
-// components/menuBarSearch/index.js
+// components/top-nav-bar/search-bar/index.js
 const app = getApp()
 
 Component({
@@ -72,7 +72,7 @@ Component({
       }, 30)
     },
   },
-
+  
   ready() {
     this.renderMenu()
 
@@ -82,6 +82,4 @@ Component({
       clearTimeout(timer)
     }, 1500)
   },
-
-
 })

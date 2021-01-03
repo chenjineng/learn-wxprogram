@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "menu-bar-search": "../../components/menuBarSearch",
-    "menu-bar": "../../components/menuBar"
+    "custom-bar": "../../components/top-nav-bar/custom-bar",
+    "search-bar": "../../components/top-nav-bar/search-bar"
   },
   "navigationStyle": "custom",
   "enablePullDownRefresh": true,

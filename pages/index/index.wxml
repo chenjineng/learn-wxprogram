@@ -11,3 +11,4 @@
     <text class="user-motto" catchtap="navToGood" data-id="101">{{motto}}</text>
   </view>
 </view>
+<tab-bar selected="{{selected}}"></tab-bar>

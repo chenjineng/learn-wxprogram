@@ -1,20 +1,4 @@
-/* components/menuBarSearch/index.wxss */
-@keyframes roll {
-  0% { top: 0px; }
-  100% { top: -400%; }
-}
-
-.box {
-  width: 100vw;
-  overflow: hidden;
-}
-
-.bar {
-  position: relative;
-  width: 100vw;
-  box-sizing: border-box;
-}
-
+/* components/top-nav-bar/search-bar/index.wxss */
 .btn-group {
   padding-left: 20rpx;
   display: flex;
@@ -46,5 +30,4 @@
   width: 80%;
   font-size: 30rpx;
   color: gray;
-  /* animation: 6s roll linear infinite; */
 }

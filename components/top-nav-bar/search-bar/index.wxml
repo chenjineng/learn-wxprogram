@@ -1,0 +1,12 @@
+<!--components/top-nav-bar/search-bar/index.wxml-->
+<frame-bar>
+  <view class="btn-group all"
+    style="width: {{bar.widthS}};height: {{bar.height}};line-height: {{bar.height}};left: {{bar.left}};">
+    <image class="icon" src="../../../images/top-nav-bar/icon-search.png"></image>
+    <view id="hot-list" class="hot-list" style="top: {{rollY + 'px'}}">
+      <block wx:for="{{hotList}}" wx:key="index">
+        <view class="hot-item nowrap" style="height: {{bar.height}};">{{item}}</view>
+      </block>
+    </view>
+  </view>
+</frame-bar>

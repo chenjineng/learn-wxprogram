@@ -1,0 +1,9 @@
+<!--components/top-nav-bar/frame/index.wxml-->
+<view class="box" style="height: {{boxHeight}};padding-top: {{bar.top}};background: {{color}}">
+  <view
+    class="bar"
+    style="height: {{bar.height}};line-height: {{bar.height}};">
+    <slot></slot>
+  </view>
+</view>
+

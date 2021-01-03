@@ -1,6 +1,5 @@
-<!--components/menuBar/index.wxml-->
-<!-- 返回键 搜索框（滚动播放） 返回主页 -->
-<view class="box" style="height: {{boxHeight}};padding-top: {{bar.top}};background: {{color}}">
+<!--components/top-nav-bar/custom-bar/index.wxml-->
+<frame-bar color="{{color}}">
   <view
     class="bar"
     style="height: {{bar.height}};line-height: {{bar.height}};">
@@ -10,9 +9,9 @@
     <view
       class="btn-group all"
       style="width: {{bar.widthB}};height: {{bar.height}};line-height: {{bar.height}};left: {{bar.left}};">
-      <image class="icon" bindtap="home" src="../../images/menuBar/icon-back.png"></image>
+      <image class="icon" bindtap="home" src="../../../images/top-nav-bar/icon-back.png"></image>
       <view class="line" style="height: {{bar.lineHeight}};"></view>
-      <image class="icon" bindtap="home" src="../../images/menuBar/icon-home.png"></image>
+      <image class="icon" bindtap="home" src="../../../images/top-nav-bar/icon-home.png"></image>
     </view>
   </view>
-</view>
+</frame-bar>

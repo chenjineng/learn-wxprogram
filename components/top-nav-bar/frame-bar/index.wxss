@@ -1,0 +1,14 @@
+/* components/top-nav-bar/frame/index.wxss */
+.box {
+  width: 100vw;
+  /* 背景色是可配置项目 */
+  /* background: blue; */
+  overflow: hidden;
+}
+
+.bar {
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  /* background: lightblue; */
+}

@@ -1,0 +1,4 @@
+<!--pages/communication/index.wxml-->
+<view>
+  <text>设置上一页的值，还可以使用 getCurrentPages()</text>
+</view>

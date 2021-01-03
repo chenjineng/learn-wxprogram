@@ -1,9 +1,9 @@
 //index.js
-//获取应用实例
 const app = getApp()
 
 Page({
   data: {
+    selected: 1,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
