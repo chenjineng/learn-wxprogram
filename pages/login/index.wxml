@@ -1,0 +1,10 @@
+<!--pages/communication/index.wxml-->
+<view class="container">
+  <view class="btn-login">
+    登录授权
+    <button-auth
+      ifCallback="true"
+      bind:callbackFunction="callbackAfterLoginSuccess">
+      </button-auth>
+  </view>
+</view>

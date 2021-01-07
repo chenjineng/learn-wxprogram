@@ -1,0 +1,15 @@
+/* pages/communication/index.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-login {
+  position: relative;
+  width: 50vw;
+  line-height: 70rpx;
+  border-radius: 50rpx;
+  background: darkgreen;
+  color: #fff;
+  text-align: center;
+}
