@@ -6,6 +6,7 @@
 }
 
 .point {
+  position: relative;
   padding: 20rpx;
   margin-bottom: 20rpx;
   width: 100%;

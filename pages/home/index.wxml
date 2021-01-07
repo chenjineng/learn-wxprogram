@@ -1,7 +1,11 @@
 <!--pages/home/index.wxml-->
 <view class="point-list">
-  <block wx:for="{{pointList}}" wx:key="index">
-    <view class="point" bindtap="navigate" data-path="{{item.path}}">{{item.point_name}}</view>
-  </block>
+  <view class="point" >
+    <view wx:if="{{!ifAuth}}" bindtap="navigateLogin" data-path="../login/index">登录后执行后调</view>
+    <view wx:else bindtap="fetchBanner">已登录（点击加载数据）</view>
+  </view>
+  <view class="point" bindtap="navigate" data-path="../navBar/index">定制顶部导航</view>
+  <view class="point" bindtap="navigate" data-path="../auth/index">用户授权</view>
+  <view class="point" bindtap="navigate" data-path="../login/index">to login</view>
 </view>
 <tab-bar selected="{{selected}}"></tab-bar>

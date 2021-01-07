@@ -4,7 +4,7 @@
     "pages/auth/index",
     "pages/navBar/index",
     "pages/logs/index",
-    "pages/calledPage/index"
+    "pages/login/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

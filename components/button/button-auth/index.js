@@ -7,25 +7,25 @@ Component({
     ifAuth: {
       type: Boolean,
       default: false
+    },
+    // 是否有回调函数（登录成功之后执行）
+    ifCallback: {
+      type: Boolean,
+      default: false
+    },
+    // 回调函数的携带的参数
+    callbackParams: {
+      type: Object,
+      default: {}
     }
   },
-
-  data: {
-    count: 1
-  },
-
+  
   observers: {
-    'count': () => {
-      console.log('数据监听：count 发生变化');
-    }
+    
   },
-
+  
   ready() {
-    setTimeout(() => {
-      this.setData({
-        count: 2
-      })
-    }, 1000)
+    
   },
   
   methods: {
@@ -35,9 +35,7 @@ Component({
       if (errMsg === "getUserInfo:ok") {
         const { encryptedData, iv, rawData, signature, userInfo } = e.detail
         const params = { encryptedData, iv, rawData, signature }
-        
         wx.setStorageSync('userInfo', JSON.stringify(userInfo))
-        
         wx.login({
           success: async (res) => {
             params['code'] = res.code
@@ -46,14 +44,21 @@ Component({
               wx.setStorageSync('openid', String(data.openid))
               wx.setStorageSync('3rd_session', String(data['3rd_session']))
               app.globalData.ifAuth = true
-              this.triggerEvent('updateAuth', {ifAuth: true})
+
+              // 判断是否有有回调函数
+              const { ifCallback } = this.data
+
+              if (ifCallback) {
+                const { callbackParams } = this.data
+                this.triggerEvent('callbackFunction', callbackParams)
+              }
             }
             catch(res) {
               console.log('error', res)
             }            
           },
-          fail(err) {
-            console.log('wx.login', err);
+          fail(error) {
+            console.log('wx.login', error);
           }
         })
       } else if (errMsg === "getUserInfo:fail auth deny") {

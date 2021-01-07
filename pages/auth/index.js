@@ -7,7 +7,6 @@ Page({
   },
   async onShow() {
     await app.updateAuthStatus(this)
-    console.log('3.', this.data.ifAuth)
   },
   
   // button 获取用户信息，拒绝了还是会弹窗
@@ -39,7 +38,7 @@ Page({
       }
     })
   },
-
+  
   // 客服消息回调，用户点击了服务端发的小程序，可以获得 path, query
   handleContact(e) {
     let { path, query } = e.detail

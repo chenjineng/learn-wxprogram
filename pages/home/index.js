@@ -1,38 +1,60 @@
 // pages/home/index.js
-const pointList = require('./route'); // 引入路由配置文件
 const api = require('../../utils/api');
+const app = getApp()
 
 Page({
   data: {
     selected: 0,
-    pointList: pointList
+    ifAuth: false,
+    count: 1
   },
   
   onLoad() {
     this.fetchBanner()
   },
 
+  async onShow() {
+    await app.updateAuthStatus(this)
+  },
+
   async fetchBanner() {
     let banner = await api.homeBanner({type: 1})
-    console.log(banner)
+    console.log('请求接口', banner)
+  },
+
+  navigate (e) {
+    let { path } = e.currentTarget.dataset
+    wx.navigateTo({
+      url: path
+    })
   },
   
-  navigate: function (e) {
-    let { path } = e.currentTarget.dataset;
+  /* 
+    事件通信：基础库 2.7.3 开始支持
+    登录之后需要执行回调 IamCallback
+  */
+  navigateLogin (e) {
+    let { path } = e.currentTarget.dataset
     wx.navigateTo({
       url: path,
-      // 基础库 2.7.3 开始支持
+      // events 事件由 login 页面 emit 触发
       events: {
-        acceptDataFromOpenedPage: (data) => {
-          this.setData({
-            'pointList[0].point_name': data.text 
-          })
+        fetchBanner: (data) => {
+          this.fetchBanner()
+          console.log('从被打开页面传回的 data：', data)
         },
+        IamCallback(data) {
+          console.log('I am Callback', data)
+        }
       },
-      // success 回调中也包含一个 EventChannel 对象
+      // 通知 login 页，登录成功需要执行什么回调
       success: function (res) {
-        res.eventChannel.emit('acceptDataFromOpenerPage', { data: '数据来源：一级page' })
+        const data = {
+          callbackFunction: 'IamCallback',
+          callbackParams: { id: 996 }
+        }
+        res.eventChannel.emit('passParams', data)
       }
     })
-  }
+  },
 })

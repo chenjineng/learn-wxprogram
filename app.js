@@ -23,13 +23,13 @@ App({
     } else {
       this.globalData.ifAuth = false
     }
-    console.log('1.globalData.ifAuth', this.globalData.ifAuth)
+    // console.log('1.globalData.ifAuth', this.globalData.ifAuth)
   },
 
   // 执行顺序，setAuthStatus 没有被先执行！
   async updateAuthStatus(that) {
     await this.setAuthStatus()
-    console.log('2.')
+    // console.log('2.')
     that.setData({
       ifAuth: this.globalData.ifAuth
     })

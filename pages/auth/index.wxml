@@ -23,12 +23,15 @@
     </button>
 
     <!-- 非 button 方式需要先请求用户授权 wx.authorize，才能调用 wx.getUserInfo -->
+    <!-- bind:updateAuth="updateAuth" -->
     <view class="btn btn-custom">
       授权用户信息
       <button-auth
         wx:if="{{!ifAuth}}" 
         ifAuth="{{ifAuth}}"
-        bind:updateAuth="updateAuth">
+        ifCallback="true"
+        callbackParams="{{ {ifAuth: true} }}"
+        bind:callbackFunction="updateAuth">
       </button-auth>
     </view>`
   </view>
