@@ -1,0 +1,29 @@
+/* pages/auth/index.wxss */
+.btn-groups {
+  padding: 0 100rpx;
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+.group {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.btn {
+  position: relative;
+  padding: 10rpx;
+  width: auto !important;
+  margin: 0 !important;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+
+.btn-custom {
+  border-radius: 10rpx;
+  background: lightblue;
+}

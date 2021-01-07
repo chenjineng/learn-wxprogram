@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "button-auth": "../../../components/button/button-auth"
+  }
+}

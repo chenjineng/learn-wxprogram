@@ -1,4 +1,4 @@
-<!--components/top-nav-bar/search-bar/index.wxml-->
+<!-- 自定义顶部导航：搜索 -->
 <frame-bar>
   <view class="btn-group all"
     style="width: {{bar.widthS}};height: {{bar.height}};line-height: {{bar.height}};left: {{bar.left}};">

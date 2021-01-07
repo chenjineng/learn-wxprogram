@@ -16,10 +16,10 @@ Component({
       selectedIconPath: "../../images/tab-bar/icon_home_HL.png",
       text: "首页"
     }, {
-      pagePath: "../../pages/index/index",
+      pagePath: "../../pages/logs/index",
       iconPath: "../../images/tab-bar/icon_API.png",
       selectedIconPath: "../../images/tab-bar/icon_API_HL.png",
-      text: "API"
+      text: "logs"
     }]
   },
   methods: {

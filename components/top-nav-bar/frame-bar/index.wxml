@@ -1,4 +1,4 @@
-<!--components/top-nav-bar/frame/index.wxml-->
+<!-- 自定义顶部导航组件，外框架 -->
 <view class="box" style="height: {{boxHeight}};padding-top: {{bar.top}};background: {{color}}">
   <view
     class="bar"

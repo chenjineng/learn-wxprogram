@@ -6,5 +6,9 @@ module.exports = [
   {
     point_name: '定制顶部导航',
     path: '../navBar/index'
+  },
+  {
+    point_name: '用户授权',
+    path: '../auth/index'
   }
 ]

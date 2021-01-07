@@ -1,5 +1,5 @@
 // components/top-nav-bar/frame/index.js
-const app = getApp()
+const utils = require('../../../utils/util');
 
 Component({
   /**
@@ -32,7 +32,7 @@ Component({
   methods: {
     // 计算顶部导航的属性
     renderMenu() {
-      let { boxHeight, bar } = app.calcMenu();
+      let { boxHeight, bar } = utils.calcMenu();
       
       this.setData({
         boxHeight,

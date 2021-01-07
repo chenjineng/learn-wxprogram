@@ -1,0 +1,6 @@
+<!-- 授权 button -->
+<button 
+  class="auth-btn reset-style-btn"
+  open-type="getUserInfo" 
+  bindgetuserinfo="getUserInfo">
+</button>

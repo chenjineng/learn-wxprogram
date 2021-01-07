@@ -1,9 +1,9 @@
-<!--components/top-nav-bar/custom-bar/index.wxml-->
+<!-- 自定义顶部导航栏：返回 | 去首页  -->
 <frame-bar color="{{color}}">
   <view
     class="bar"
     style="height: {{bar.height}};line-height: {{bar.height}};">
-    <!-- 自定义顶部导航栏  -->
+    
     <text class="title text-center">{{title}}</text>
     
     <view

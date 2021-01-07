@@ -1,0 +1,85 @@
+<!--pages/auth/index.wxml-->
+<view class="btn-groups">
+  <!-- 授权用户信息 -->
+  <view class="group between">
+    <!-- 
+      ## 判断是否授权 
+      1.wx.getSetting
+      
+      ## button->getUserInfo 与 wx.getUserInfo 的区别
+      1.button方式会弹窗，直接使用 wx.getUserInfo 禁用弹窗了（公告：2018-04-15），需要先授权
+      2.button-getUserInfo 需要重写原生 button 的样式
+
+      ## button->getUserInfo 与 wx.login 的关系
+      1.button->getUserInfo  弹窗   配合接口获取头像、昵称、UnionID、openid、session_key 
+      2.wx.login            不弹窗  配合接口获取 openid、session_key
+      3.获取手机号 / 支付，需要先调用 wx.login，
+    -->
+    <button
+      class="btn reset-style-btn" 
+      open-type="getUserInfo" 
+      bindgetuserinfo="getUserInfo">
+      授权用户信息
+    </button>
+
+    <!-- 非 button 方式需要先请求用户授权 wx.authorize，才能调用 wx.getUserInfo -->
+    <view class="btn btn-custom">
+      授权用户信息
+      <button-auth
+        wx:if="{{!ifAuth}}" 
+        ifAuth="{{ifAuth}}"
+        bind:updateAuth="updateAuth">
+      </button-auth>
+    </view>`
+  </view>
+  
+  <view class="group">
+    <!-- 
+      设置客服聊天窗口中发送的卡片。点击卡片会返回当前页面（而不是进入设置的页面），
+      进入设置的页面需要手动退回微信聊天列表，进入客服会话再点击卡片 
+    -->
+    <button
+      class="btn reset-style-btn" 
+      open-type="contact"
+      session-from="123"
+      bindcontact="handleContact" 
+      show-message-card
+      send-message-title="测试title" send-message-path="/pages/home/index"
+      send-message-img="../../images/tab-bar/icon_home.png">
+      客服消息
+    </button>
+  </view>
+
+  <view class="group between">
+    <!-- 引导用户到设置页面打开权限。也可以js调用 wx.openSetting -->
+    <button class="btn reset-style-btn" loading="true" open-type="openSetting" bindopensetting="opensetting">
+      授权设置页
+    </button>
+
+    <!-- 基础库 2.10.3 才开始支持 -->
+    <view class="btn btn-custom" bindtap="openSetting">引导用户授权</view>
+  </view>
+
+  <view class="group">
+    <!-- 需先调用 wx.login 接口 -->
+    <button class="btn reset-style-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      授权手机号
+    </button>
+  </view>
+
+  <view class="group">
+    <button class="btn reset-style-btn" open-type="feedback">意见反馈</button>
+  </view>
+
+  <view class="group">
+    <button class="btn reset-style-btn" open-type="launchApp" binderror="launchAppError"
+      bindlaunchapp="launchappSuccess">
+      打开App
+    </button>
+  </view>
+
+  <view class="group">
+    <!-- 基础库 2.4.4 才开始支持 -->
+    <view class="btn btn-custom" bindtap="subscribeMessage">订阅消息</view>
+  </view>
+</view>
